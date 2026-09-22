@@ -1,9 +1,9 @@
-# 考公官方入口导航 · 国考 + 31 省省考
+# 考公入口导航 · 国考 + 31 省省考
 
-> 一份**只收录官方入口**的考公资源导航。不含任何付费课程内容，不提供需要网盘保存的「资料包」。
+> 提供需要网盘保存的「资料包」。
 >
-> 🖥 **在线导航页（可点击直达）**：https://posstos.github.io/kaogong-official-resources/
-> 📖 **图文版（更好读、持续更新）**：https://my.feishu.cn/docx/FPrmd87x7o1NyqxHNTocn4fVnjh
+> 🖥 **资料在线导航页（可点击直达）**：https://my.feishu.cn/docx/K2uAdrKyuoPo2ZxVqqKcOdMhnOb
+
 
 [![更新](https://img.shields.io/badge/更新-2026--09-blue)]() [![官方源](https://img.shields.io/badge/来源-政务网站官方-red)]() [![授权](https://img.shields.io/badge/授权-CC%20BY%204.0-green)](LICENSE)
 
