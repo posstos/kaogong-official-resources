@@ -1,0 +1,60 @@
+# ---- 操作系统 ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# ---- 依赖目录 ----
+node_modules/
+vendor/
+__pycache__/
+*.py[cod]
+
+# ---- 构建产物 ----
+dist/
+build/
+out/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# ---- 本地临时 / 草稿 ----
+*.tmp
+*.bak
+.cache/
+tmp/
+scratch/
+draft/
+_private/
+
+# ---- 环境与密钥（本仓库不需要任何密钥，出现即为误提交）----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+id_rsa*
+credentials.json
+secrets.json
+
+# ---- 刻意不收录的内容 ----
+# 本仓库只收录可溯源的官方公开入口。
+# 不放：网盘分享文件、受版权保护的课程材料、任何需登录的第三方镜像。
+downloads/
+*.zip
+*.rar
+*.7z
+*.pdf

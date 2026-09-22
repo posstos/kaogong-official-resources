@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考公官方入口导航 · 国考 + 31 省省考</title>
+<meta name="description" content="一份只收录官方入口的考公资源导航：国考专题站、31 省区市省考官方入口、2027 考季时间线。不含付费课程内容，不提供网盘资料包。">
+<style>
+  :root{
+    --bg:#f7f6f2; --card:#ffffff; --ink:#1c1b19; --ink-2:#5a5751;
+    --line:#e6e3db; --accent:#a6332b; --accent-soft:#fbf0ee;
+    --ok:#2f7d5a; --code:#f2f0ea;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75; font-size:15px;
+  }
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(166,51,43,.25)}
+  a:hover{border-bottom-color:var(--accent)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  header{padding:52px 0 28px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin:0 0 14px}
+  h1{font-size:31px;line-height:1.3;margin:0 0 16px;letter-spacing:-.01em}
+  .lede{font-size:16px;color:var(--ink-2);margin:0;max-width:70ch}
+  .meta{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:12.5px;color:var(--ink-2);background:var(--card);border:1px solid var(--line);
+        border-radius:999px;padding:3px 11px}
+  .chip.hot{color:var(--accent);background:var(--accent-soft);border-color:rgba(166,51,43,.2)}
+
+  main{padding:34px 0 60px}
+  section{margin:0 0 40px}
+  h2{font-size:20px;margin:0 0 6px;letter-spacing:-.005em}
+  h2 .num{color:var(--accent);font-variant-numeric:tabular-nums;margin-right:8px}
+  .sub{color:var(--ink-2);font-size:13.5px;margin:0 0 18px}
+
+  .facts{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .fact{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px}
+  .fact h3{margin:0 0 8px;font-size:15px}
+  .fact p{margin:0;color:var(--ink-2);font-size:14px}
+  .fact .n{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);
+           background:var(--accent-soft);border-radius:5px;padding:1px 7px;margin-right:7px}
+
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);
+        border-radius:12px;overflow:hidden;font-size:14px}
+  thead th{background:#faf9f5;text-align:left;font-weight:600;font-size:12.5px;letter-spacing:.03em;
+           color:var(--ink-2);padding:11px 14px;border-bottom:1px solid var(--line)}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#fdfcfa}
+  td.region{font-weight:600;white-space:nowrap}
+  code{background:var(--code);border:1px solid var(--line);border-radius:5px;
+       padding:1px 6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.8px;
+       word-break:break-all}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .callout{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--accent);
+           border-radius:10px;padding:16px 18px;font-size:14px;color:var(--ink-2)}
+  .callout strong{color:var(--ink)}
+  .callout.hint{border-left-color:var(--ok)}
+
+  ul.avoid{list-style:none;padding:0;margin:0;display:grid;gap:10px;
+           grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  ul.avoid li{background:var(--card);border:1px solid var(--line);border-radius:10px;
+              padding:13px 16px;font-size:14px;color:var(--ink-2)}
+  ul.avoid li b{color:var(--ink);display:block;font-size:14px;margin-bottom:2px}
+  ul.avoid li code{font-size:12.4px}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 46px;color:var(--ink-2);font-size:13.5px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;border:none;border-radius:9px;
+       padding:11px 20px;font-size:14.5px;font-weight:600;margin:4px 8px 4px 0}
+  .btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(166,51,43,.35)}
+  @media (max-width:640px){
+    h1{font-size:24px}
+    header{padding:36px 0 22px}
+    table{font-size:13px}
+    td,thead th{padding:9px 11px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="kicker">备考资源导航 · 更新于 2026.09</p>
+    <h1>考公别再乱搜了：<br>国考 + 31 省省考的官方入口</h1>
+    <p class="lede">
+      一份<b>只收录官方入口</b>的导航。把散在 180 多个政务网站里的公告首发平台、报名入口、职位表下载位置收进一张表，把时间线算准，把免费且权威的资源列清。不含任何付费课程内容，不提供需要网盘保存的「资料包」。
+    </p>
+    <div class="meta">
+      <span class="chip hot">官方源 · 可溯源</span>
+      <span class="chip">31 省区市</span>
+      <span class="chip">2027 考季时间线</span>
+      <span class="chip">CC BY 4.0</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2><span class="num">01</span>先纠正三个认知</h2>
+    <p class="sub">这三条决定了你后面所有动作的方向。</p>
+    <div class="facts">
+      <div class="fact">
+        <h3><span class="n">反常识</span>官方从不公开成套真题</h3>
+        <p>国考试卷考后由机要渠道统一回收，官方不发布真题与标准答案。网上所有「历年真题 PDF」都来自考后考生回忆 + 机构交叉还原——挑真题的第一标准是<b>来源</b>，不是数量。</p>
+      </div>
+      <div class="fact">
+        <h3><span class="n">关键</span>免费且权威的只有四样</h3>
+        <p><b>考试大纲、招考简章（职位表）、报考指南、政策法规原文</b>。只在官方专题站发布，免费、可下载、可长期保存。多数人低效的原因是没打开过大纲。</p>
+      </div>
+      <div class="fact">
+        <h3><span class="n">注意</span>国考已无「唯一官网」</h3>
+        <p>国家公务员局官网 scs.gov.cn 已于 <b>2025 年 8 月底下线</b>，但招考业务不受影响——报名、职位表、缴费、成绩全部继续在考录专题站完成。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>国考 · 唯一官方入口</h2>
+    <p class="sub">一句话记法：国考 = bm.scs.gov.cn，一切都在这个站内闭环。</p>
+    <div class="scroll">
+    <table>
+      <thead><tr><th style="width:34%">用途</th><th>入口</th></tr></thead>
+      <tbody>
+        <tr><td>全流程专题站</td><td><a href="https://bm.scs.gov.cn" target="_blank" rel="noopener"><code>bm.scs.gov.cn</code></a></td></tr>
+        <tr><td>当年专题直达</td><td><a href="https://bm.scs.gov.cn/kl2027" target="_blank" rel="noopener"><code>bm.scs.gov.cn/kl2027</code></a>（换年份即可）</td></tr>
+        <tr><td>考生报名入口</td><td>专题站首页 → 考生报名入口</td></tr>
+        <tr><td>缴费 / 准考证打印</td><td>专题站首页 → 考生考务入口</td></tr>
+        <tr><td>成绩查询</td><td>专题站首页 → 笔试成绩查询</td></tr>
+        <tr><td>政策法规原文</td><td>专题站导航「政策法规」</td></tr>
+        <tr><td>职位表 / 登记表 / 推荐表</td><td>专题站导航「相关下载」</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>2027 国考时间线</h2>
+    <p class="sub">国考节奏是公考里最稳的：近十年公告日几乎锁定 10 月 14 日，报名窗口固定 10 天。</p>
+    <div class="scroll">
+    <table>
+      <thead><tr><th style="width:26%">环节</th><th style="width:37%">2027 年度（预计）</th><th>2026 年度（实际）</th></tr></thead>
+      <tbody>
+        <tr><td>公告 + 职位表</td><td>2026-10-14</td><td>2025-10-14</td></tr>
+        <tr><td>网上报名</td><td>2026-10-15 08:00 — 10-24 18:00</td><td>2025-10-15 — 10-24</td></tr>
+        <tr><td>资格审查截止</td><td>2026-10-26 18:00</td><td>2025-10-26</td></tr>
+        <tr><td>报名确认及缴费</td><td>2026-11-01 — 11-06</td><td>2025-11-01 — 11-06</td></tr>
+        <tr><td>准考证打印</td><td>笔试前一周（11 月下旬）</td><td>2025-11 下旬</td></tr>
+        <tr><td>公共科目笔试</td><td>2026-11-28 — 11-29</td><td>2025-11-29 — 11-30</td></tr>
+        <tr><td>成绩与合格线</td><td>2027-01 中旬</td><td>2026-01-15</td></tr>
+        <tr><td>调剂 / 补录</td><td>2027-01 / 2027-05</td><td>2026-01 / 2026-05</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="sub" style="margin-top:14px">参考规模：2026 年度国考招录 <b>38119 人 / 20714 个职位</b>，过审人数超 <b>371.8 万</b>，税务系统约占六成。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>考什么 · 国考行测结构</h2>
+    <p class="sub">2026 年度起新增「政治理论」模块。申论分副省级 / 市地级 / 行政执法类三类卷，行政执法类不考大作文。</p>
+    <div class="scroll">
+    <table>
+      <thead><tr><th style="width:40%">模块</th><th>副省级</th><th>市地级 / 行政执法类</th></tr></thead>
+      <tbody>
+        <tr><td>政治理论</td><td>20</td><td>20</td></tr>
+        <tr><td>常识判断</td><td>15</td><td>15</td></tr>
+        <tr><td>言语理解与表达</td><td>30</td><td>30</td></tr>
+        <tr><td>数量关系</td><td>15</td><td>10</td></tr>
+        <tr><td>判断推理</td><td>35</td><td>35</td></tr>
+        <tr><td>资料分析</td><td>20</td><td>20</td></tr>
+        <tr><td><b>合计</b></td><td><b>135 题</b></td><td><b>130 题</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>31 省（区、市）省考官方入口</h2>
+    <p class="sub">
+      自主命题（北京、上海、江苏、浙江、山东、广东、四川、天津）走「年末省考」，2026 年 12 月上中旬笔试；其余 20 余省份参加多省联考，2027 年 3 月中旬笔试。两类时间不冲突，可同时报考。
+    </p>
+    <div class="scroll">
+    <table>
+      <thead><tr><th style="width:14%">地区</th><th>官方入口</th></tr></thead>
+      <tbody>
+        <tr><td class="region">北京</td><td>北京组工 <a href="https://www.bjdj.gov.cn" target="_blank" rel="noopener"><code>bjdj.gov.cn</code></a>；报名 <a href="https://rsj.beijing.gov.cn/bm/ztzl/gwy/" target="_blank" rel="noopener"><code>rsj.beijing.gov.cn/bm/ztzl/gwy/</code></a></td></tr>
+        <tr><td class="region">天津</td><td><a href="https://gklx.hrss.tj.gov.cn" target="_blank" rel="noopener"><code>gklx.hrss.tj.gov.cn</code></a></td></tr>
+        <tr><td class="region">河北</td><td><a href="https://www.hebpta.com.cn" target="_blank" rel="noopener"><code>hebpta.com.cn</code></a>；<a href="http://www.hebdj.gov.cn" target="_blank" rel="noopener"><code>hebdj.gov.cn</code></a></td></tr>
+        <tr><td class="region">山西</td><td><a href="http://rst.shanxi.gov.cn/rsks/" target="_blank" rel="noopener"><code>rst.shanxi.gov.cn/rsks/</code></a></td></tr>
+        <tr><td class="region">内蒙古</td><td><a href="http://www.impta.com.cn" target="_blank" rel="noopener"><code>impta.com.cn</code></a></td></tr>
+        <tr><td class="region">辽宁</td><td><a href="https://www.lnrsks.com/" target="_blank" rel="noopener"><code>lnrsks.com</code></a></td></tr>
+        <tr><td class="region">吉林</td><td><a href="http://www.jlgwyks.cn" target="_blank" rel="noopener"><code>jlgwyks.cn</code></a></td></tr>
+        <tr><td class="region">黑龙江</td><td><a href="http://www.hljsgwy.org.cn" target="_blank" rel="noopener"><code>hljsgwy.org.cn</code></a></td></tr>
+        <tr><td class="region">上海</td><td><a href="https://shacs.gov.cn" target="_blank" rel="noopener"><code>shacs.gov.cn</code></a></td></tr>
+        <tr><td class="region">江苏</td><td><a href="http://www.jszzb.gov.cn" target="_blank" rel="noopener"><code>jszzb.gov.cn</code></a>；<a href="https://jshrss.jiangsu.gov.cn" target="_blank" rel="noopener"><code>jshrss.jiangsu.gov.cn</code></a></td></tr>
+        <tr><td class="region">浙江</td><td><a href="https://gwy.zjks.gov.cn" target="_blank" rel="noopener"><code>gwy.zjks.gov.cn</code></a></td></tr>
+        <tr><td class="region">安徽</td><td><a href="https://www.ahxf.gov.cn" target="_blank" rel="noopener"><code>ahxf.gov.cn</code></a>；<a href="https://www.apta.gov.cn" target="_blank" rel="noopener"><code>apta.gov.cn</code></a></td></tr>
+        <tr><td class="region">福建</td><td><a href="http://gwykl.fujian.gov.cn" target="_blank" rel="noopener"><code>gwykl.fujian.gov.cn</code></a></td></tr>
+        <tr><td class="region">江西</td><td><a href="https://www.jxpta.com" target="_blank" rel="noopener"><code>jxpta.com</code></a></td></tr>
+        <tr><td class="region">山东</td><td><a href="https://www.dtdjzx.gov.cn" target="_blank" rel="noopener"><code>dtdjzx.gov.cn</code></a>（灯塔·党建在线）</td></tr>
+        <tr><td class="region">河南</td><td><a href="http://www.hnrsks.com" target="_blank" rel="noopener"><code>hnrsks.com</code></a></td></tr>
+        <tr><td class="region">湖北</td><td><a href="https://rst.hubei.gov.cn/hbrsksw/" target="_blank" rel="noopener"><code>rst.hubei.gov.cn/hbrsksw/</code></a></td></tr>
+        <tr><td class="region">湖南</td><td><a href="https://www.hxw.gov.cn" target="_blank" rel="noopener"><code>hxw.gov.cn</code></a>；<a href="https://rst.hunan.gov.cn/rst/hnrsksw/rskswsy.html" target="_blank" rel="noopener"><code>rst.hunan.gov.cn</code></a></td></tr>
+        <tr><td class="region">广东</td><td><a href="https://www.gdzz.gov.cn" target="_blank" rel="noopener"><code>gdzz.gov.cn</code></a>；报名 <a href="https://ggfw.hrss.gd.gov.cn/gwyks/index.do" target="_blank" rel="noopener"><code>ggfw.hrss.gd.gov.cn/gwyks/</code></a></td></tr>
+        <tr><td class="region">广西</td><td><a href="http://www.gxpta.com.cn" target="_blank" rel="noopener"><code>gxpta.com.cn</code></a></td></tr>
+        <tr><td class="region">海南</td><td><a href="https://www.nanhaixf.gov.cn" target="_blank" rel="noopener"><code>nanhaixf.gov.cn</code></a>；<a href="http://ea.hainan.gov.cn" target="_blank" rel="noopener"><code>ea.hainan.gov.cn</code></a></td></tr>
+        <tr><td class="region">重庆</td><td><a href="https://rlsbj.cq.gov.cn" target="_blank" rel="noopener"><code>rlsbj.cq.gov.cn</code></a></td></tr>
+        <tr><td class="region">四川</td><td><a href="https://www.scpta.com.cn/front/" target="_blank" rel="noopener"><code>scpta.com.cn</code></a></td></tr>
+        <tr><td class="region">贵州</td><td><a href="https://www.gzzzb.gov.cn" target="_blank" rel="noopener"><code>gzzzb.gov.cn</code></a>；<a href="http://www.gzrsks.com.cn" target="_blank" rel="noopener"><code>gzrsks.com.cn</code></a></td></tr>
+        <tr><td class="region">云南</td><td><a href="https://ylxf.1237125.cn" target="_blank" rel="noopener"><code>ylxf.1237125.cn</code></a>（云岭先锋网 · 公务员招录专栏）</td></tr>
+        <tr><td class="region">西藏</td><td><a href="https://hrss.xizang.gov.cn" target="_blank" rel="noopener"><code>hrss.xizang.gov.cn</code></a></td></tr>
+        <tr><td class="region">陕西</td><td><a href="http://www.sx-dj.gov.cn" target="_blank" rel="noopener"><code>sx-dj.gov.cn</code></a>；<a href="http://www.sxrsks.cn" target="_blank" rel="noopener"><code>sxrsks.cn</code></a></td></tr>
+        <tr><td class="region">甘肃</td><td><a href="http://www.gszg.gov.cn" target="_blank" rel="noopener"><code>gszg.gov.cn</code></a></td></tr>
+        <tr><td class="region">青海</td><td><a href="http://www.qhpta.com" target="_blank" rel="noopener"><code>qhpta.com</code></a></td></tr>
+        <tr><td class="region">宁夏</td><td><a href="http://www.nxdjw.gov.cn" target="_blank" rel="noopener"><code>nxdjw.gov.cn</code></a>；<a href="http://www.nxpta.com" target="_blank" rel="noopener"><code>nxpta.com</code></a></td></tr>
+        <tr><td class="region">新疆</td><td><a href="http://www.xjkunlun.cn" target="_blank" rel="noopener"><code>xjkunlun.cn</code></a>；<a href="https://rst.xinjiang.gov.cn" target="_blank" rel="noopener"><code>rst.xinjiang.gov.cn</code></a>；<a href="https://www.xjrsks.com.cn" target="_blank" rel="noopener"><code>xjrsks.com.cn</code></a></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="sub" style="margin-top:14px">政务网站域名偶有调整，<b>以当年公告正文给出的报名入口为准</b>。本表每季度复核。</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>免费的权威资源</h2>
+    <p class="sub">按「越靠前越权威」排序。</p>
+    <div class="scroll">
+    <table>
+      <thead><tr><th style="width:14%">层级</th><th style="width:32%">资源</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>官方</td><td><b>考试大纲</b></td><td>专题站发布，最高优先级，决定复习范围边界</td></tr>
+        <tr><td>官方</td><td><b>招考简章（职位表）</b></td><td>专题站「相关下载」，选岗唯一依据</td></tr>
+        <tr><td>官方</td><td><b>报考指南</b></td><td>看清应届生身份、基层经历、专业目录认定口径</td></tr>
+        <tr><td>官方</td><td><b>政策法规原文</b></td><td>公务员法、录用规定、体检标准、违纪违规处理办法</td></tr>
+        <tr><td>官方</td><td>各省组织工作网 / 党建网</td><td>公告首发平台，比第三方转载快 1—2 天</td></tr>
+        <tr><td>出版</td><td>省级考试机构编写的真题汇编</td><td>权威性高、答案准确，官方渠道出版发行</td></tr>
+        <tr><td>平台</td><td>主流机构免费开放部分</td><td>在线题库基础功能、免费公开课、考后真题还原</td></tr>
+        <tr><td>公共</td><td>时政学习平台</td><td>申论与政治理论的素材积累</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout hint" style="margin-top:16px">
+      <strong>一个判断标准：</strong>如果一个「资料包」必须存进网盘才能用、链接还会定期失效，它既不是你的核心资产，也不值得占你的注意力。真正该占位置的，是那四份官方文件。
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>避坑清单</h2>
+    <p class="sub">这几条踩中任何一条，都会实实在在浪费你几周时间。</p>
+    <ul class="avoid">
+      <li><b>收藏 scs.gov.cn 当报名入口</b>该站已下线，招考走专题站 <code>bm.scs.gov.cn</code></li>
+      <li><b>去找「官方真题 PDF」</b>官方不发，不存在。所有成套真题都是机构还原版</li>
+      <li><b>报名卡最后一天</b>审核不通过就没有改报时间了</li>
+      <li><b>不看大纲就买课</b>大纲免费，且比任何导学课都准</li>
+      <li><b>专业名称按习惯写法填</b>必须与毕业证表述完全一致</li>
+      <li><b>相信「永久有效」的网盘链接</b>政务信息以官网为准，二次转发的必然失效</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>备考节奏（对准 2027 考季）</h2>
+    <div class="scroll">
+    <table>
+      <thead><tr><th style="width:22%">阶段</th><th style="width:24%">时间</th><th>做什么</th></tr></thead>
+      <tbody>
+        <tr><td>打基础</td><td>现在 — 2026-10</td><td>不管国省考差异，先啃行测五大模块 + 申论方法论</td></tr>
+        <tr><td>定岗</td><td>2026-10-14 起</td><td>下载职位表，按学历 / 专业 / 政治面貌 / 基层年限筛岗，备好备选岗</td></tr>
+        <tr><td>国考冲刺</td><td>2026-11</td><td>真题模考按套掐时间，行测按模块补短板</td></tr>
+        <tr><td>小联考</td><td>2026-12</td><td>京沪苏浙鲁粤川津，与国考错开约一周，可连报</td></tr>
+        <tr><td>联考决胜</td><td>2027-01 — 03</td><td>公告后定岗，3 月中旬笔试</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0 0 14px">
+      本页只收录<b>可溯源到政务网站本身</b>的官方公开入口：不收录受版权保护的付费课程内容，不提供需要网盘保存的资料包。
+    </p>
+    <p style="margin:0 0 18px">
+      发现入口失效或有遗漏，欢迎提 Issue —— 整份清单的更新节奏是每季度复核一次。
+    </p>
+    <a class="btn ghost" href="https://github.com/posstos/kaogong-official-resources">在 GitHub 上查看 / 提 Issue</a>
+    <a class="btn ghost" href="https://my.feishu.cn/docx/FPrmd87x7o1NyqxHNTocn4fVnjh">飞书图文版</a>
+    <p style="margin:16px 0 0;font-size:12.5px">整理内容采用 CC BY 4.0 授权 · 最后复核 2026-09-22</p>
+  </div>
+</footer>
+
+</body>
+</html>
